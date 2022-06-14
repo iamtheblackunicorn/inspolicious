@@ -1,26 +1,36 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <RandWordContainer :randWords="words.randWords"/>
+  <button @click="reset()">REROLL</button>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+
+import RandWordContainer from './components/RandWordContainer.vue'
 
 export default {
+
   name: 'App',
   components: {
-    HelloWorld
-  }
+    RandWordContainer
+  },
+
+  data(){
+    var randomWords = require('random-words');
+    return {
+      words: {
+        randWords: randomWords(5).join(' ')
+      }
+    }
+  },
+
+  methods: {
+
+    reset(){
+      var randomWords = require('random-words');
+      var viewModel = this;
+      viewModel.words.randWords = randomWords(5).join(' ');
+    }
+
+  }  
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
