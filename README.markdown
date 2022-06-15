@@ -8,6 +8,10 @@
 
 I recently wanted to dive into Node.js and all of its projects and frameworks. I have been playing around with Vue.js for some time now and finally seriously decided to make a project using Vue.js. This project is a word generator for creative people. So if maybe you need some words or ideas for a seed of an idea for a story or an artwork, this generator gives you a random bunch of words. Enjoy. :heart:
 
+## DEPLOYED PROJECT ON NETLIFY :rocket:
+
+To view a live deployed version of this project, click here: [VIEW](https://taupe-pavlova-1c22ca.netlify.app/)
+
 ## SET IT UP :inbox_tray:
 
 Make sure you have the following tools installed and available from the command line:
