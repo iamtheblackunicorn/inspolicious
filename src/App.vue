@@ -1,11 +1,26 @@
+<!--
+Inspolicious by Alexander Abraham,
+a.k.a. "The Black Unicorn", a.k.a. "Angeldust Duke".
+Licensed under the MIT license.
+-->
+
 <template>
+  <!--The main component that unites everything.-->
   <div class="content">
+   <!--The static text component.-->
    <HeadingText name="Inspolicious" instructions="Get random words to inspire creative efforts and press the button to regenerate them."/>
    <br/>
    <p>Your words:</p>
+   <!--
+   The component to iterate over the array of objects
+   containing random words.
+   -->
    <RandWordContainer :randWords="words.randWords"/>
    <br/>
    <br/>
+   <!--
+   A button to reset the object array.
+   -->
    <button @click="reset()">REROLL</button>
   </div>
   <br/>
@@ -24,6 +39,7 @@ export default {
     HeadingText
   },
 
+  // Returning the object array and building it.
   data(){
     var randomWords = require('random-words');
     var wordList = [];
@@ -41,6 +57,8 @@ export default {
 
   methods: {
 
+    // Returning the object array and building it
+    // and resetting the state of the global "randWords" variable.
     reset(){
       var viewModel = this;
       var randomWords = require('random-words');
@@ -58,12 +76,13 @@ export default {
 </script>
 
 <style lang="scss">
-
+// Importing a remote font.
 @font-face {
   font-family: 'PSB';
   src: url('https://blckunicorn.art/assets/fonts/PSB.ttf') format('truetype');
 }
 
+// Setting project variables.
 $stdFont: 'PSB';
 $bgColor: #433966;
 $divColor:#BC7FFE;
@@ -71,6 +90,7 @@ $contentColor:#FFFFFF;
 $gradientColorOne:#70C7FE;
 $gradientColorTwo:#FF7BAC;
 
+// Desktop section starts here.
 html,body {
   top:0;
   right:0;
@@ -82,7 +102,6 @@ html,body {
   height:100vh;
   background-color:$bgColor;
 }
-
 h1 {
   text-align:center;
   font-family: 'PSB';
@@ -94,7 +113,6 @@ h1 {
   margin-top: 0px;
   margin-bottom: 10px;
 }
-
 p {
   text-align:left;
   font-family: 'PSB';
@@ -106,7 +124,6 @@ p {
   margin-top: 0px;
   margin-bottom: 10px;
 }
-
 div.content {
   background-color: $divColor;
   width: 80%;
@@ -117,10 +134,13 @@ div.content {
   margin-top: 30px !important;
   margin-bottom: 30px !important;
 }
-
 button {
   width: 100%;
-  background: linear-gradient( 45deg, $gradientColorOne, $gradientColorTwo);
+  background: linear-gradient(
+    45deg, 
+    $gradientColorOne, 
+    $gradientColorTwo
+  );
   border: none;
   border-radius: 15px;
   font-size: 30px;
@@ -130,11 +150,9 @@ button {
   transition-duration: 0.6s;
   font-family: $stdFont;
 }
-
 button:hover {
   padding: 25px;
 }
-
 ul {
   width: 100%;
   margin-top: 0px;
@@ -144,7 +162,6 @@ ul {
   list-style: none;
   padding: 0px;
 }
-
 li {
   width: 100%;
   padding-top: 10px;
@@ -163,7 +180,9 @@ li {
   font-family: $stdFont;
   background-color: transparent;
 }
+// Desktop section ends here.
 
+// Mobile section starts here.
 @media screen and (max-width: 800px){
   h1 {
     font-size: 35px;
@@ -182,6 +201,5 @@ li {
     font-size: 23px;
   }
 }
-
-
+// Mobile section ends here.
 </style>
