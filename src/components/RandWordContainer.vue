@@ -1,5 +1,9 @@
 <template>
-  <h1>{{ randWords }}</h1>
+  <ul>
+   <li v-for="word in randWords" v-bind:key="word.msg">
+    {{ word.msg }}
+   </li>
+  </ul>
 </template>
 
 <script>
