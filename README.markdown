@@ -10,7 +10,7 @@ I recently wanted to dive into Node.js and all of its projects and frameworks. I
 
 ## DEPLOYED PROJECT ON NETLIFY :rocket:
 
-To view a live deployed version of this project, click here: [VIEW](https://taupe-pavlova-1c22ca.netlify.app/)
+To view a live deployed version of this project, click here: [inspolicio.us](https://inspolicio.us)
 
 ## SET IT UP :inbox_tray:
 
