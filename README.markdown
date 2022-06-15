@@ -55,6 +55,16 @@ $ npm run build
 
 ***Inspolicious*** gives you a bunch of words to inspire you for whatever, be it a story, an artwork, whatever you want. To get a new set of words, simply press the *REROLL* button.
 
-## Note :scroll:
+## CHANGELOG :black_nib:
+
+### Version 1.0.0
+
+- Initial release.
+- Upload to GitHub.
+- Styling finalized.
+- Deployment on Netlify.
+
+## NOTE :scroll:
+
 - *Inspolicious :black_nib: :ribbon:* by Alexander Abraham :black_heart: a.k.a. *"The Black Unicorn" :unicorn:*
 - Licensed under the MIT license.

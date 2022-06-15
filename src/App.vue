@@ -23,20 +23,23 @@ Licensed under the MIT license.
    -->
    <button @click="reset()">REROLL</button>
   </div>
-  <br/>
+  <!--Small footer text.-->
+  <FooterText creditsText="Made with &#x2665; by Alexander Abraham in Vue.js."/>
 </template>
 
 <script>
 
-import RandWordContainer from './components/RandWordContainer.vue'
-import HeadingText from './components/Heading.vue'
+import FooterText from './components/Footer.vue';
+import RandWordContainer from './components/RandWordContainer.vue';
+import HeadingText from './components/Heading.vue';
 
 export default {
 
   name: 'App',
   components: {
     RandWordContainer,
-    HeadingText
+    HeadingText,
+    FooterText
   },
 
   // Returning the object array and building it.
@@ -84,11 +87,13 @@ export default {
 
 // Setting project variables.
 $stdFont: 'PSB';
-$bgColor: #433966;
+$bgColor: #000000;
 $divColor:#BC7FFE;
 $contentColor:#FFFFFF;
-$gradientColorOne:#70C7FE;
-$gradientColorTwo:#FF7BAC;
+$divGradientColorOne: #EA1573;
+$divGradientColorTwo: #FF9BAC;
+$buttonGradientColorOne:#70C7FE;
+$buttonGradientColorTwo:#FF7BAC;
 
 // Desktop section starts here.
 html,body {
@@ -125,7 +130,11 @@ p {
   margin-bottom: 10px;
 }
 div.content {
-  background-color: $divColor;
+  background: linear-gradient(
+    45deg,
+    $divGradientColorOne,
+    $divGradientColorTwo
+  );
   width: 80%;
   padding: 20px;
   margin: 0 auto;
@@ -138,8 +147,8 @@ button {
   width: 100%;
   background: linear-gradient(
     45deg, 
-    $gradientColorOne, 
-    $gradientColorTwo
+    $buttonGradientColorTwo,
+    $buttonGradientColorOne
   );
   border: none;
   border-radius: 15px;
@@ -180,10 +189,30 @@ li {
   font-family: $stdFont;
   background-color: transparent;
 }
+footer {
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: $bgColor;
+  border-top: 3px solid $divGradientColorOne;
+  border-bottom: none;
+  border-right: none;
+  border-left: none;
+  margin: 0;
+  color: $divGradientColorOne;
+  left: 0;
+  right: 0;
+  padding: 20px;
+  font-family: $stdFont;
+  font-size: 25px;
+}
 // Desktop section ends here.
 
 // Mobile section starts here.
 @media screen and (max-width: 800px){
+  html, body {
+    overflow-x: hidden;
+  }
   h1 {
     font-size: 35px;
   }
@@ -199,6 +228,10 @@ li {
   }
   li {
     font-size: 23px;
+  }
+  footer {
+    padding: 10px;
+    font-size: 20px;
   }
 }
 // Mobile section ends here.
