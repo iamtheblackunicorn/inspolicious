@@ -8,7 +8,7 @@
 
 I recently wanted to dive into Node.js and all of its projects and frameworks. I have been playing around with Vue.js for some time now and finally seriously decided to make a project using Vue.js. This project is a word generator for creative people. So if maybe you need some words or ideas for a seed of an idea for a story or an artwork, this generator gives you a random bunch of words. To use this tool, simply click the link for the deployed version of ***Inspolicious***. Enjoy. :heart:
 
-## DEPLOYED PROJECT ON NETLIFY :rocket:
+## DEPLOYED PROJECT ON GITHUB PAGES :rocket:
 
 To view a live deployed version of this project, click here: [inspolicio.us](https://inspolicio.us)
 
@@ -62,7 +62,7 @@ $ npm run build
 - Initial release.
 - Upload to GitHub.
 - Styling finalized.
-- Deployment on Netlify.
+- Deployment on GitHub Pages.
 
 ## NOTE :scroll:
 
